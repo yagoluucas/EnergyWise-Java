@@ -18,4 +18,8 @@ public class ComunidadeResponseDTO
     private Integer numPopulacao;
     private String nomeCidade;
     private Timestamp dataCadastro;
+
+    public Long getId() {
+        return this.id;
+    }
 }

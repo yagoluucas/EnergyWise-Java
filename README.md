@@ -60,32 +60,17 @@ O sistema foi desenvolvido utilizando o framework **Spring Boot**, seguindo a ar
 - **Banco de Dados Oracle** (ou ajustar para outro banco de dados)
 - **Postman** (para testes manuais da API)
 - **Navegador Web** (para acessar o Swagger UI)
+- **Docker Desktop** Para rodar a aplicação e subir o container localmente
 
-### Instalação
+### Como iniciar
 
-1. **Clone o repositório:**
+Navegue até a pasta raiz do do projeto e via linha de comando digite o seguinte código
 
-   ```bash
-   git clone https://github.com/Mauricio-Pereira/EnergyWise.git
-   ```
+```cmd
+docker-compose --env-file .env -f docker-compose.yml -f docker-compose.prod.yml up -d
+```
 
-2. **Navegue até o diretório do projeto:**
-
-   ```bash
-   cd EnergyWise
-   ```
-
-3. **Configure o arquivo `application.properties` com as credenciais do seu banco de dados.**
-
-4. **Compile e execute a aplicação:**
-
-   ```bash
-   gradle bootRun
-   ```
-
-### Executando a Aplicação
-
-A aplicação estará disponível em `http://localhost:8080`.
+Após isso a aplicação de produção estará disponível em `http://localhost:8080`.
 
 - **URL Base:** `http://191.234.176.144:8080`
 
@@ -470,26 +455,3 @@ http://localhost:8080/swagger-ui/index.html
 ## Conclusão
 
 O **EnergyWise** é uma solução completa para o gerenciamento de energia solar em comunidades, oferecendo ferramentas para monitorar o consumo de energia, calcular a quantidade necessária de placas solares e promover a sustentabilidade energética.
-
-## Contato
-
-**Maurício Pereira**.
-- Email: [Gmail](mailto:mauricio.pvieira1@gmail.com)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mauriciovpereira/)
-
-**Yago Lucas Gonçalves**.  
-- Email: [Gmail](mailto:yago543@gmail.com)  
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/yago-lucas-silva/)
-
-**Luiz Otávio Leitão**.
-- Email: [Gmail](mailto:luizotavio.ok@gmail.com)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/luizotavioleitaosilva/)
-
----
-
-
-
-
-
-
-

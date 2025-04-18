@@ -36,4 +36,7 @@ public class TipoPlacaSolar {
     @Column(name = "PRECO_UNITARIO", nullable = false, precision = 12, scale = 2)
     private BigDecimal precoUnitario;
 
+    public Long getId() {
+        return this.id;
+    }
 }
