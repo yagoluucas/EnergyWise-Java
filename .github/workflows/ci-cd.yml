@@ -60,6 +60,6 @@ jobs:
 
       - name: Testar endpoint
         run: |
-          sleep 15 # Espera o container iniciar
+          sleep 60
           curl -v http://localhost:8080/comunidade
      
