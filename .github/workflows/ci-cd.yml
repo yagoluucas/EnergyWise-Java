@@ -60,6 +60,6 @@ jobs:
 
       - name: Testar endpoint
         run: |
-          sleep 10 # espera o app subir
-          curl -v http://localhost:8080/health
+          sleep 15 # Espera o container iniciar
+          curl -v http://localhost:8080/comunidade
      
