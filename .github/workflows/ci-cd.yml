@@ -17,9 +17,10 @@ jobs:
     steps:
       - name: Checkout do código
         uses: actions/checkout@v3
+
       - name: Dar permissão de execução ao gradlew
         run: chmod +x gradlew
-        
+
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
@@ -54,3 +55,11 @@ jobs:
       - name: Push da imagem para o DockerHub
         run: |
           docker push $REGISTRY/$IMAGE_NAME:$TAG
+      - name: Rodar container
+        run: docker run -d -p 8080:8080 --name energywise $REGISTRY/$IMAGE_NAME:$TAG
+
+      - name: Testar endpoint
+        run: |
+          sleep 10 # espera o app subir
+          curl -v http://localhost:8080/health
+     
