@@ -55,6 +55,7 @@ jobs:
       - name: Push da imagem para o DockerHub
         run: |
           docker push $REGISTRY/$IMAGE_NAME:$TAG
+          
       - name: Rodar container
         run: docker run -d -p 8080:8080 --name energywise $REGISTRY/$IMAGE_NAME:$TAG
 
